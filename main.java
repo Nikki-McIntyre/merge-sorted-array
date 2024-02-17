@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 class Solution {
   public void merge(int[] nums1, int m, int[] nums2, int n) {
-    sortArray(nums1, m, nums2, n);
 
+    sortArray(nums1, m, nums2, n);
   }
 
   public int[] sortArray(int[] nums1, int m, int[] nums2, int n) {
@@ -18,7 +19,7 @@ class Solution {
       sorted.add(nums2[i]);
     }
     // sort it in ascending order
-    sorted.sort(Comparator.naturalOrder());
+    Collections.sort(sorted);
 
     // print results
     for (int i = 0; i < sorted.size(); i++) {
